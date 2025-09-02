@@ -3,6 +3,6 @@ function main() {
 }
 
 // Run main if this script is executed directly
-if (require.main === module) {
-    main();
-}
+// if (require.main === module) {
+//     main();
+// }

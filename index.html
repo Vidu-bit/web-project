@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple HTML Starter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 <body>
-    <h1>Welcome to Your Web Project</h1>
-    <p>This is a simple HTML document starter.</p>
+    <div class="container text-center mt-2">
+        <h1>Welcome to Your Web Project</h1>
+        <p>This is a simple HTML document starter.</p>
+        <div>
+            <button id="decrement" class="button">-</button>
+            <span id="counter">0</span>
+            <button id="increment" class="button">+</button>
+        </div>
+    </div>
+    <script>
+        const counter = document.getElementById('counter');
+        document.getElementById('increment').onclick = () => {
+            counter.textContent = parseInt(counter.textContent) + 1;
+        };
+        document.getElementById('decrement').onclick = () => {
+            counter.textContent = parseInt(counter.textContent) - 1;
+        };
+    </script>
 </body>
 </html>
